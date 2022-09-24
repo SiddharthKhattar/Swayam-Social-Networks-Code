@@ -1,0 +1,90 @@
+Python 3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022, 23:13:41) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+import networkx as nx
+N = 10
+G = nx.grid_2d_graph(N,N)
+import matplotlib.pyplot as plt
+nx.draw(G)
+plt.show()
+G.nodes()
+NodeView(((0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (2, 0), (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (4, 0), (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (5, 0), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (7, 0), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (8, 0), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (9, 0), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9)))
+pos = dict ((n,n) for n in G.nodes()
+            )
+nx.draw(G,pos)
+plt.show()
+((i,j) , i *10 + j) for i,j in G.nodes()
+SyntaxError: invalid syntax
+KeyboardInterrupt
+labels = dict(((i,j) , i*10+j for i,j in G.nodes())
+              
+SyntaxError: invalid syntax
+KeyboardInterrupt
+labels = dict(((i,j) , i*10+j) for i,j in G.nodes())
+              
+nx.draw(G,pos)
+              
+plt.show()
+              
+ns.draw_networkx_labels(G,pos,labels = labels)
+              
+Traceback (most recent call last):
+  File "<pyshell#16>", line 1, in <module>
+    ns.draw_networkx_labels(G,pos,labels = labels)
+NameError: name 'ns' is not defined. Did you mean: 'nx'?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nx.draw_networkx_labels(G,pos,labels = labels)
+              
+{(0, 0): Text(0, 0, '0'), (0, 1): Text(0, 1, '1'), (0, 2): Text(0, 2, '2'), (0, 3): Text(0, 3, '3'), (0, 4): Text(0, 4, '4'), (0, 5): Text(0, 5, '5'), (0, 6): Text(0, 6, '6'), (0, 7): Text(0, 7, '7'), (0, 8): Text(0, 8, '8'), (0, 9): Text(0, 9, '9'), (1, 0): Text(1, 0, '10'), (1, 1): Text(1, 1, '11'), (1, 2): Text(1, 2, '12'), (1, 3): Text(1, 3, '13'), (1, 4): Text(1, 4, '14'), (1, 5): Text(1, 5, '15'), (1, 6): Text(1, 6, '16'), (1, 7): Text(1, 7, '17'), (1, 8): Text(1, 8, '18'), (1, 9): Text(1, 9, '19'), (2, 0): Text(2, 0, '20'), (2, 1): Text(2, 1, '21'), (2, 2): Text(2, 2, '22'), (2, 3): Text(2, 3, '23'), (2, 4): Text(2, 4, '24'), (2, 5): Text(2, 5, '25'), (2, 6): Text(2, 6, '26'), (2, 7): Text(2, 7, '27'), (2, 8): Text(2, 8, '28'), (2, 9): Text(2, 9, '29'), (3, 0): Text(3, 0, '30'), (3, 1): Text(3, 1, '31'), (3, 2): Text(3, 2, '32'), (3, 3): Text(3, 3, '33'), (3, 4): Text(3, 4, '34'), (3, 5): Text(3, 5, '35'), (3, 6): Text(3, 6, '36'), (3, 7): Text(3, 7, '37'), (3, 8): Text(3, 8, '38'), (3, 9): Text(3, 9, '39'), (4, 0): Text(4, 0, '40'), (4, 1): Text(4, 1, '41'), (4, 2): Text(4, 2, '42'), (4, 3): Text(4, 3, '43'), (4, 4): Text(4, 4, '44'), (4, 5): Text(4, 5, '45'), (4, 6): Text(4, 6, '46'), (4, 7): Text(4, 7, '47'), (4, 8): Text(4, 8, '48'), (4, 9): Text(4, 9, '49'), (5, 0): Text(5, 0, '50'), (5, 1): Text(5, 1, '51'), (5, 2): Text(5, 2, '52'), (5, 3): Text(5, 3, '53'), (5, 4): Text(5, 4, '54'), (5, 5): Text(5, 5, '55'), (5, 6): Text(5, 6, '56'), (5, 7): Text(5, 7, '57'), (5, 8): Text(5, 8, '58'), (5, 9): Text(5, 9, '59'), (6, 0): Text(6, 0, '60'), (6, 1): Text(6, 1, '61'), (6, 2): Text(6, 2, '62'), (6, 3): Text(6, 3, '63'), (6, 4): Text(6, 4, '64'), (6, 5): Text(6, 5, '65'), (6, 6): Text(6, 6, '66'), (6, 7): Text(6, 7, '67'), (6, 8): Text(6, 8, '68'), (6, 9): Text(6, 9, '69'), (7, 0): Text(7, 0, '70'), (7, 1): Text(7, 1, '71'), (7, 2): Text(7, 2, '72'), (7, 3): Text(7, 3, '73'), (7, 4): Text(7, 4, '74'), (7, 5): Text(7, 5, '75'), (7, 6): Text(7, 6, '76'), (7, 7): Text(7, 7, '77'), (7, 8): Text(7, 8, '78'), (7, 9): Text(7, 9, '79'), (8, 0): Text(8, 0, '80'), (8, 1): Text(8, 1, '81'), (8, 2): Text(8, 2, '82'), (8, 3): Text(8, 3, '83'), (8, 4): Text(8, 4, '84'), (8, 5): Text(8, 5, '85'), (8, 6): Text(8, 6, '86'), (8, 7): Text(8, 7, '87'), (8, 8): Text(8, 8, '88'), (8, 9): Text(8, 9, '89'), (9, 0): Text(9, 0, '90'), (9, 1): Text(9, 1, '91'), (9, 2): Text(9, 2, '92'), (9, 3): Text(9, 3, '93'), (9, 4): Text(9, 4, '94'), (9, 5): Text(9, 5, '95'), (9, 6): Text(9, 6, '96'), (9, 7): Text(9, 7, '97'), (9, 8): Text(9, 8, '98'), (9, 9): Text(9, 9, '99')}
+plt.show()
+              
+for (u,v) in G.nodes():
+              if (u+1 <= N-1 and (v+1 <= N-1):
+                  
+SyntaxError: invalid syntax
+for (u,v) in G.nodes():
+              if (u+1 <= N-1 and (v+1 <= N-1): G.add_edge((u,v), (u+1,v+1))
+                  
+SyntaxError: invalid syntax
+for (u,v) in G.nodes():
+              if (u+1 <= N-1) and (v+1 <= N-1) :
+                   G.add_edge((u,v), (u+1,v+1))
+
+                  
+nx.draw(G,pos)
+                  
+plt,show()
+                  
+Traceback (most recent call last):
+  File "<pyshell#36>", line 1, in <module>
+    plt,show()
+NameError: name 'show' is not defined
+plt.show()
+                  
+for (u,v) in G.nodes():
+              if (u+1 <=N-1) and (v-1 >= 0) :
+                   G.add_edge((u,v), (u+1,v+1))
+
+                  
+Traceback (most recent call last):
+  File "<pyshell#39>", line 1, in <module>
+    for (u,v) in G.nodes():
+RuntimeError: dictionary changed size during iteration

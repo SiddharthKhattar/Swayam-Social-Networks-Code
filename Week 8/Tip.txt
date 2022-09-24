@@ -1,0 +1,4 @@
+1) When we multiply a matrix to a vector repeatedly, the matrix converges.
+
+2) When we add a "big" vector to a "small" vector,
+The resultant vector is close to the direction of the "big" vector.

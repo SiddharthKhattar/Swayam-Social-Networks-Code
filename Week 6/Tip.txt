@@ -1,0 +1,1 @@
+In a random graph with n nodes, to visit all nodes in a random walk, the number of nodes required to be travelled is  = n*log(n)

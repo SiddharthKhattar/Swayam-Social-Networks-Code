@@ -1,0 +1,1 @@
+A graph with "n" number of edges has roughly (n^2/2) number of edges.
